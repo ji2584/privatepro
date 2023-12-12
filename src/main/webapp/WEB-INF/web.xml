@@ -39,7 +39,7 @@
   <jsp-config>
     <jsp-property-group>
        <url-pattern>/member/*</url-pattern>
-        <url-pattern>/jihoon/*</url-pattern>
+       
        <include-prelude>/common/header.jsp</include-prelude>
        <include-coda>/common/footer.jsp</include-coda>
     </jsp-property-group>

@@ -17,10 +17,10 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="<%=request.getContextPath()%>/assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="<%=request.getContextPath()%>/jihoon/css/styles.css" rel="stylesheet" />
-         <link href="<%=request.getContextPath()%>/jihoon/css/style2.css" rel="stylesheet" />
-         <link href="<%=request.getContextPath()%>/jihoon/css/board.css" rel="stylesheet" />
-         <link href="<%=request.getContextPath()%>/jihoon/css/membership.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+         <link href="../css/style2.css" rel="stylesheet" />
+         <link href="../css/board.css" rel="stylesheet" />
+         <link href="../css/membership.css" rel="stylesheet" />
   
     
     </head>
