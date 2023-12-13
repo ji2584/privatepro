@@ -57,12 +57,55 @@ public Member oneMember(String loginId) throws SQLException {
 		m.setLoginPw(rs.getString("loginPw"));
 		m.setName(rs.getString("name"));
 		m.setCellphoneNo(rs.getString("cellphoneNo"));
+		m.setNickname(rs.getString("nickname"));
 		m.setEmail(rs.getString("email"));
 		return m;
 	}
 	return null;
 }
+public  int UpdateMember(Member kicmem) throws SQLException {
+	 Connection conn = getConnection();
+	 String sql = "Update member set name=?,cellphoneNo=?,email=?,nickname=? where loginId=?";
+    PreparedStatement pstmt = conn.prepareStatement(sql);
+	;
+	
+	pstmt.setString(1,kicmem.getName());
+    pstmt.setString(2,kicmem.getCellphoneNo());
+    pstmt.setString(3,kicmem.getEmail());
+    pstmt.setString(4, kicmem.getNickname());
+    pstmt.setString(5,kicmem.getLoginId());
+		  int num = pstmt.executeUpdate();
+		return num;
+	
+}
 
+public int DeleteMember(String loginId) throws UnsupportedEncodingException, SQLException {
+    
+    Connection conn = getConnection();
+        String sql = "delete member where loginid = ?";
+       PreparedStatement pstmt = conn.prepareStatement(sql);
+       //mapping
+       pstmt.setString(1,loginId);
+       
+       //4)excute
+       int num = pstmt.executeUpdate();
+       return num;
+                
+ }
+public int PassMember(String loginId,String chgpass) throws UnsupportedEncodingException, SQLException {
+    
+    Connection conn = getConnection();
+        String sql = "update member set loginPw=? where loginId=?" ;
+       PreparedStatement pstmt = conn.prepareStatement(sql);
+       //mapping
+       pstmt.setString(1,chgpass);
+       pstmt.setString(2, loginId);
+       
+       //4)excute
+       int num = pstmt.executeUpdate();
+       return num;
+                
+ }
 
 
 }// class end

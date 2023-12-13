@@ -46,7 +46,7 @@ if(login==null){
                         <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/member/memberInput.jsp">회원가입</a></li>
                         <%} else  {%>
                         <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/member/logout.jsp">로그아웃</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/member/memberinfo.jsp">회원정보</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/member/memberinfo.jsp">[<%=login%>]&nbsp;&nbsp;회원정보</a></li>
                      <%} %>
                     </ul>
                 </div>
