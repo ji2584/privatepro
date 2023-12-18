@@ -3,12 +3,21 @@
 
         <!-- Page header with logo and tagline-->
         <header class="py-5 bg-light border-bottom mb-4">
-            <div class="container">
-                <div class="text-center my-5">
-                    <h1 class="fw-bolder">신라호텔에 오신 걸 환영합니다!</h1>
-                    <p class="lead mb-0">국내 최고 럭셔리 호텔인 호텔신라는 신라호텔과 신라스테이 브랜드를 보유하고 있습니다.</p>
-                </div>
-            </div>
+        <div class="banner">
+    <img src="../images/hotel.jpg" alt="배너 이미지" id="bannerImg">
+</div>
+        <script>let images = ["../images/hotel.jpg", "../images/monogram.jpg", "../images//seoulhotel.jpg"]; // 이미지 경로들
+        let currentImageIndex = 0;
+        let imageElement = document.getElementById("bannerImg");
+
+        function changeImage() {
+            imageElement.src = images[currentImageIndex];
+            currentImageIndex = (currentImageIndex + 1) % images.length; // 다음 이미지 인덱스로 변경
+        }
+
+        setInterval(changeImage, 3000); /* // 3초마다 이미지 변경 (시간은 밀리초 단위로 설정) */</script>
+    
+ 
         </header>
         <!-- Page content-->
         <div class="container">
